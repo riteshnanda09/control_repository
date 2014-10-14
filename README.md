@@ -23,7 +23,7 @@ This document outlines the process of configuring and deploying a dev all-in-one
     
     :sources:
       :puppet:
-        remote: 'git://github.kp.org/kpcsd/Control_Repository.git'
+        remote: 'https://github.corp.ebay.com/rinanda/Control_Repository.git'
         basedir: '/etc/puppetlabs/puppet/environments'
     EOF
 
