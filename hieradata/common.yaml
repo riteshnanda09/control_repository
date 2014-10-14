@@ -1,0 +1,4 @@
+---
+yumrepourl: 'http://cloudyum.appl.kp.org/$releasever/$basearch'
+yumupdaterepourl: 'http://172.30.32.243/rhel6.4_updates'
+install_dir: '/root/maintenance/scripts'

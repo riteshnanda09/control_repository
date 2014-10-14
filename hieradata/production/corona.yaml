@@ -1,0 +1,3 @@
+ntp_servers:
+- cdcntp202.crdc.kp.org
+- ndcntp202.nndc.kp.org

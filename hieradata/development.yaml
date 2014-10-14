@@ -1,0 +1,6 @@
+---
+yumrepourl: 'http://cloudyum.appl.kp.org/$releasever/'
+isec:
+ -remote_file: 'http://czxdap3.crdc.kp.org/global/rhel6/isec/rhel6_isec-v1.sh'
+ -install_dir: '/root/maintenance/scripts/'
+ -directory_created: '/root/maintenance/scripts/isec'
