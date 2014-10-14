@@ -1,0 +1,19 @@
+--- 
+:backends: 
+  - yaml 
+  - eyaml
+:hierarchy: 
+  - defaults 
+  - common 
+  - "%{clientcert}" 
+  - "%{environment}" 
+  - '%{environment}/%{location}' 
+  - global 
+
+:yaml:
+  :datadir: "/etc/puppetlabs/puppet/environments/%{environment}/hieradata"
+
+:eyaml:
+  :datadir: '/etc/puppetlabs/puppet/environments/%{environment}/hieradata'
+  :pkcs7_private_key: /etc/puppetlabs/puppet/hiera_eyaml/private_key.pkcs7.pem
+  :pkcs7_public_key:  /etc/puppetlabs/puppet/hiera_eyaml/public_key.pkcs7.pem
