@@ -1,0 +1,16 @@
+class profile::os (
+$url = 'http://cloudyum.appl.kp.org/$releasever/',
+)
+{
+	case $::operatingsystem {
+		redhat: { 
+	  	          class { 'osfamily::yumrepo':
+                          url => $url,
+}
+			}
+
+		windows: {
+			}
+
+}
+}	

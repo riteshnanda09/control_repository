@@ -1,0 +1,28 @@
+class profile::kpbase {
+
+	case $::operatingsystem {
+                redhat: {
+			case $::operatingsystemrelease {
+
+			/^6/: {
+				class { 'osfamily::yumrepo': } ->
+        	                class { 'kp_linux_base::ntpdate': } ->
+	                        class { 'kp_linux_base::isec':} ->
+                        	class { 'kp_linux_base::tsm':} ->
+                	        class { 'kp_linux_base::uuid':} ->
+                    	   	class { 'kp_linux_base::tattoo':} ->
+                       		class { 'kp_linux_base::yum_update':}
+                        }
+
+			/^5/: {
+				}
+
+			default: { notice("OS is not suppoerted '${::operatingsystemrelease}'.")
+			    }
+			}
+	
+		windows: {
+                        }
+
+	}
+}
